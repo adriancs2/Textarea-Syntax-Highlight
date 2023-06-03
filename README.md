@@ -15,7 +15,7 @@ The shortcut keys are implemented by adding a JavaScript event listener for `inp
 - Press [Shift]+[Del]/[Backspace] to delete the entire line
 - Press [Home] to move the cursor to the front of the first non-white space character
 
-The following articles provide a walkthrough of the code behind the syntax highlighting and shortcut key features:
+The following articles provide a walkthrough (step by step explanation) of the code behind the syntax highlighting and shortcut key features:
 
 - [https://adriancs.com/html-css-js/1015/syntax-highlightning-in-textarea-html/](https://adriancs.com/html-css-js/1015/syntax-highlightning-in-textarea-html/)
 - [https://www.codeproject.com/Articles/5361561/Syntax-Highlightning-for-Textarea-HTML](https://www.codeproject.com/Articles/5361561/Syntax-Highlightning-for-Textarea-HTML)
