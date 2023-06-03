@@ -1,23 +1,23 @@
 # Syntax Highlightning for Textarea (HTML)
 
-Transform Textarea into code editor with syntax highlight and shortcut keys supported.
+Transform a textarea into a code editor with syntax highlighting and shortcut key support.
 
-- Live Demo: [http://textarea-syntax.adriancs.com/](http://textarea-syntax.adriancs.com/)
+Live Demo: [http://textarea-syntax.adriancs.com/](http://textarea-syntax.adriancs.com/)
 
-The syntax highlightning is done by using `highlight.js`.
+Syntax highlighting is accomplished using `highlight.js`.
 
-The shortcut keys is done by adding a javascript event listener of `input` on the textarea and using a bunch of javascript to enable the following shortcut keys:
+The shortcut keys are implemented by adding a JavaScript event listener for `input` on the textarea, and using a collection of JavaScript code to enable the following shortcut keys:
 
-- When [Enter] is hit, maintain indention as previous line
-- Press [Tab] for indentation at current position
-- Press [Shift]+[Tab] for decrease indentation at current position
+- When [Enter] is hit, maintain indentation of the previous line
+- Press [Tab] for indentation at the current position
+- Press [Shift]+[Tab] to decrease indentation at the current position
 - Press [Tab] / [Shift]+[Tab] for multiline indentation
 - Press [Shift]+[Del]/[Backspace] to delete the entire line
 - Press [Home] to move the cursor to the front of the first non-white space character
 
-The following documentation (Article) explains the walkthrough of code behind of how the syntax highlightning and shortcut keys are made.
+The following articles provide a walkthrough of the code behind the syntax highlighting and shortcut key features:
 
-- [adriancs.com](https://adriancs.com/html-css-js/1015/syntax-highlightning-in-textarea-html/)
-- [codeproject.com](https://www.codeproject.com/Articles/5361561/Syntax-Highlightning-for-Textarea-HTML)
+- [https://adriancs.com/html-css-js/1015/syntax-highlightning-in-textarea-html/](https://adriancs.com/html-css-js/1015/syntax-highlightning-in-textarea-html/)
+- [https://www.codeproject.com/Articles/5361561/Syntax-Highlightning-for-Textarea-HTML](https://www.codeproject.com/Articles/5361561/Syntax-Highlightning-for-Textarea-HTML)
 
 Cheers and happy coding.
