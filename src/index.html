@@ -398,7 +398,7 @@
     <ol>
         <li>[Enter]: Maintain indentation as previous line.</li>
         <li>[Tab] / [Shift]+[Tab]: Increase/decrease indentation (multiline supported)</li>
-        <li>[Shift] + [De]/[Backspace]: Delete entire row.</li>
+        <li>[Shift] + [Del]/[Backspace]: Delete entire row.</li>
         <li>[Home]: Move cursor to the front of first non-white space character.</li>
     </ol>
 
@@ -610,44 +610,6 @@
                 return;
             }
 
-            // Move cursor to the first non-white space character
-            if (e.key === "Home") {
-
-                // get the line and the position in that line where the cursor is
-                // pop() = take out the last line (which is the cursor selection start located)
-                let line = this.value.substring(0, this.selectionStart).split('\n').pop();
-
-                // get the position of cursor within the last line
-                let cursorPosInLine = line.length;
-
-                // Find the start of the current line
-                let lineStartPos = this.value.substring(0, this.selectionStart).lastIndexOf('\n') + 1;
-
-                // Find the first non-whitespace character on the line
-                let firstNonWhitespacePos = line.search(/\S/);
-
-                // the cursor's position is already in front of first non-whitespace character,
-                // or it's position is before first none-whitespace character,
-                // move the cursor to the start of line
-                if (firstNonWhitespacePos >= cursorPosInLine) {
-                    // do nothing, perform default behaviour, which is moving the cursor to beginning of the line
-                    return true;
-                }
-                // If there's no non-whitespace character, this is an empty or whitespace-only line
-                else if (firstNonWhitespacePos === -1) {
-                    // do nothing, perform default behaviour, which is moving the cursor to beginning of the line
-                    return true;
-                }
-
-                // Prevent the default Home key behavior
-                e.preventDefault();
-
-                // Move the cursor to the position of the first non-whitespace character
-                this.selectionStart = this.selectionEnd = lineStartPos + firstNonWhitespacePos;
-
-                return;
-            }
-
             // [Shift] + [Del]/[Backspace] = Delete entire line(s)
             if (e.shiftKey && (e.key === "Delete" || e.key === "Backspace")) {
 
@@ -700,6 +662,46 @@
                 updateCode();
                 return;
             }
+
+            // Move cursor to the first non-white space character
+            if (e.key === "Home") {
+
+                // get the line and the position in that line where the cursor is
+                // pop() = take out the last line (which is the cursor selection start located)
+                let line = this.value.substring(0, this.selectionStart).split('\n').pop();
+
+                // get the position of cursor within the last line
+                let cursorPosInLine = line.length;
+
+                // Find the start of the current line
+                let lineStartPos = this.value.substring(0, this.selectionStart).lastIndexOf('\n') + 1;
+
+                // Find the first non-whitespace character on the line
+                let firstNonWhitespacePos = line.search(/\S/);
+
+                // the cursor's position is already in front of first non-whitespace character,
+                // or it's position is before first none-whitespace character,
+                // move the cursor to the start of line
+                if (firstNonWhitespacePos >= cursorPosInLine) {
+                    // do nothing, perform default behaviour, which is moving the cursor to beginning of the line
+                    return true;
+                }
+                // If there's no non-whitespace character, this is an empty or whitespace-only line
+                else if (firstNonWhitespacePos === -1) {
+                    // do nothing, perform default behaviour, which is moving the cursor to beginning of the line
+                    return true;
+                }
+
+                // Prevent the default Home key behavior
+                e.preventDefault();
+
+                // Move the cursor to the position of the first non-whitespace character
+                this.selectionStart = this.selectionEnd = lineStartPos + firstNonWhitespacePos;
+
+                return;
+            }
+
+
         });
 
         // change theme
@@ -737,7 +739,7 @@
         function loadSampleHtml() {
 
             // using fetch api to load a sample html document
-            fetch('/Textarea-As-Editor.aspx')
+            fetch('/index.html')
                 .then(response => response.text())
                 .then(html => {
                     textarea1.value = html.trim();
