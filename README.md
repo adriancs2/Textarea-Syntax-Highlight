@@ -23,3 +23,5 @@ Documentation:
 - [https://www.codeproject.com/Articles/5361561/Syntax-Highlightning-for-Textarea-HTML](https://www.codeproject.com/Articles/5361561/Syntax-Highlightning-for-Textarea-HTML)
 
 Cheers and happy coding.
+
+While this project allows for syntax highlighting in a textarea, it doesn't provide the full functionality of a code editor like VS Code or Atom. If you need features like autocomplete, error checking, or code folding, you might want to consider using a more fully-featured code editor library like Ace, CodeMirror, or Monaco, which are designed to provide a full-featured code editing experience in the browser.
