@@ -17,6 +17,8 @@ The shortcut keys are implemented by adding a JavaScript event listener for `inp
 
 The following articles provide a walkthrough (step by step explanation) of the code behind the syntax highlighting and shortcut key features:
 
+Documentation:
+
 - [https://adriancs.com/html-css-js/1015/syntax-highlightning-in-textarea-html/](https://adriancs.com/html-css-js/1015/syntax-highlightning-in-textarea-html/)
 - [https://www.codeproject.com/Articles/5361561/Syntax-Highlightning-for-Textarea-HTML](https://www.codeproject.com/Articles/5361561/Syntax-Highlightning-for-Textarea-HTML)
 
